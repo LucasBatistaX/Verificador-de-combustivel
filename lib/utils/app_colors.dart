@@ -6,7 +6,9 @@ class AppColors {
   static const Color backgroundHeaderEnd = Color(0xffA21015);
   static const Color backgroundBody = Color(0xff141414);
   static const Color backgroundCard = Color(0xff242424); // with opacity 100%;
-  static const Color backgroundButton = Color(0xffFBC709);
+  static const Color backgroundButtonBegin = Color(0xffFBC709);
+  static const Color backgroundButtonEnd = Color(0xffE29803);
+  static const Color backgroundFill = Color(0xff333333);
 
   //Text Colors.
   static const Color title = Color(0xffFFFFFF); // with opacity 80%

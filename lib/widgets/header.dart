@@ -5,9 +5,7 @@ import 'package:fuel_wise/utils/app_sizes.dart';
 import 'package:fuel_wise/utils/app_text_style.dart';
 
 class Header extends StatelessWidget {
-  const Header({
-    super.key,
-  });
+  const Header({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,15 +22,15 @@ class Header extends StatelessWidget {
           ],
         ),
       ),
-    
+
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: AppSizes.s24),
         child: Column(
           children: [
             Image.asset(
-              AppAssets.Logo,
+              AppAssets.logo,
               height: AppSizes.h80,
-              color: AppColors.backgroundButton,
+              color: AppColors.backgroundButtonBegin,
             ),
             Text("Gasolina ou Etanol?", style: AppTextStyles.titleHeader),
             Text(
