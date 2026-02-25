@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:fuel_wise/utils/app_assets.dart';
 import 'package:fuel_wise/utils/app_colors.dart';
 import 'package:fuel_wise/utils/app_sizes.dart';
+import 'package:fuel_wise/utils/app_text_style.dart';
 
 class CardInfo extends StatelessWidget {
-  const CardInfo({
-    super.key,
-  });
+  const CardInfo({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,14 +30,7 @@ class CardInfo extends StatelessWidget {
                   children: [
                     Image.asset(AppAssets.info),
                     SizedBox(width: AppSizes.s12),
-                    Text(
-                      "Como funciona?",
-                      style: TextStyle(
-                        color: AppColors.title,
-                        fontSize: AppSizes.s14,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                    Text("Como funciona?", style: AppTextStyles.titleInfo),
                   ],
                 ),
               ),
@@ -60,34 +52,20 @@ class CardInfo extends StatelessWidget {
                                 TextSpan(
                                   text:
                                       "O etanol compensa quando seu preço é até ",
-                                  style: TextStyle(
-                                    color: AppColors.subtitleCard,
-                                    fontSize: AppSizes.s12,
-                                  ),
+                                  style: AppTextStyles.richTextStyle,
                                 ),
                                 TextSpan(
                                   text: "70% ",
-                                  style: TextStyle(
-                                    color: AppColors
-                                        .backgroundButtonBegin,
-                                    fontSize: AppSizes.s12,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                                  style: AppTextStyles.colorfulTextStyle,
                                 ),
                                 TextSpan(
                                   text: "do valor da gasolina. \n",
-                                  style: TextStyle(
-                                    color: AppColors.subtitleCard,
-                                    fontSize: AppSizes.s12,
-                                  ),
+                                  style: AppTextStyles.richTextStyle,
                                 ),
                                 TextSpan(
                                   text:
                                       "Isso acontece porque o etanol rende aproximadamente 70% da quilometragem da gasolina.",
-                                  style: TextStyle(
-                                    color: AppColors.subtitleCard,
-                                    fontSize: AppSizes.s12,
-                                  ),
+                                  style: AppTextStyles.richTextStyle,
                                 ),
                               ],
                             ),
