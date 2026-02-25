@@ -20,6 +20,7 @@ class AppSizes {
   static const double s32 = 32.0;
   static const double s36 = 36.0;
   static const double s48 = 48.0;
+  static const double s50 = 50.0;
   static const double s56 = 56.0;
   static const double s60 = 60.0;
 
@@ -27,6 +28,7 @@ class AppSizes {
   static const double h200 = 200.0; //Header height;
   static const double h80 = 80.0; //Logo height;
   static const double h380 = 380.0; //CardData height;
+  static const double h120 = 120.0; //CardInfo height;
 
   //Widths Specifics.
   static const double w448 = 448.0; //CardData height;
