@@ -1,16 +1,99 @@
-# fuel_wise
+🚗 FuelWise
 
-A new Flutter project.
+FuelWise é um aplicativo desenvolvido em Flutter que tem como objetivo ajudar o usuário a decidir se compensa abastecer com gasolina ou etanol, com base nos preços informados e na regra de rendimento entre os combustíveis.
 
-## Getting Started
+O projeto está sendo desenvolvido de forma incremental, com foco em organização, clareza de código e boa experiência do usuário.
+_________________________________________________________________________________________________________________________________
+🎯 Objetivo do Projeto
 
-This project is a starting point for a Flutter application.
+O FuelWise permite que o usuário:
 
-A few resources to get you started if this is your first Flutter project:
+Informe o preço da gasolina
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Informe o preço do etanol
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Visualize qual combustível compensa mais
+
+Entenda como o cálculo é feito, através de um card explicativo no app
+
+A decisão é baseada na regra dos 70%, amplamente utilizada no Brasil:
+
+O etanol compensa quando seu preço é até 70% do valor da gasolina.
+_________________________________________________________________________________________________________________________________
+
+🛠️ Tecnologias Utilizadas
+
+Flutter – desenvolvimento multiplataforma
+
+Dart – linguagem principal
+
+Cubit – gerenciamento de estado (flutter_bloc)
+
+Arquitetura modular por responsabilidade
+
+UI customizada com componentes reutilizáveis.
+
+_________________________________________________________________________________________________________________________________
+
+🧠 Gerenciamento de Estado
+
+O gerenciamento de estado é feito utilizando Cubit, garantindo:
+
+Separação clara entre lógica e interface.
+
+Código mais previsível e fácil de manter.
+
+Melhor controle sobre estados de cálculo e resultado.
+
+_________________________________________________________________________________________________________________________________
+
+📂 Estrutura de Pastas
+
+```
+lib/
+├── cubit/
+│   └── (responsável pelo gerenciamento de estado do app)
+│
+├── services/
+│   └── service.dart
+│      (contém a regra de negócio e o cálculo entre gasolina e etanol)
+│
+├── src/
+│   └── home_page.dart
+│      (tela principal do aplicativo)
+│
+├── utils/
+│   ├── app_assets.dart
+│   ├── app_colors.dart
+│   ├── app_sizes.dart
+│   └── app_text_style.dart
+│      (constantes visuais e padronização de estilos)
+│
+├── widgets/
+│   ├── header.dart
+│   ├── forms.dart
+│   ├── card_info.dart
+│   ├── result_dialog.dart
+│   └── footer.dart
+│      (componentes reutilizáveis da interface)
+│
+└── main.dart
+   (ponto de entrada da aplicação)
+```
+_________________________________________________________________________________________________________________________________
+
+🚀 Status do Projeto
+
+🔧 Em desenvolvimento
+📈 Evoluindo passo a passo
+📢 Progresso sendo documentado no LinkedIn
+
+📌 Próximos Passos (planejado)
+
+Validações de input
+
+Melhorias de UX
+
+Refatorações e organização adicional da arquitetura
+
+Publicação do app (GitPages).
