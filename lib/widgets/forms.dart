@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fuel_wise/utils/app_assets.dart';
 import 'package:fuel_wise/utils/app_colors.dart';
 import 'package:fuel_wise/utils/app_sizes.dart';
 import 'package:fuel_wise/utils/app_text_style.dart';
+import 'package:fuel_wise/widgets/result_dialog.dart';
 
 class Forms extends StatelessWidget {
   const Forms({super.key});
@@ -92,7 +94,11 @@ class Forms extends StatelessWidget {
                       borderRadius: BorderRadiusGeometry.circular(AppSizes.s12),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    showDialog(context: context, builder: (context) {
+                      return ResultDialog();
+                    },);
+                  },
                   child: Row(
                     mainAxisAlignment: .center,
                     children: [

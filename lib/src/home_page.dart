@@ -25,7 +25,6 @@ class _MyWidgetState extends State<HomePage> {
             Forms(),
             CardInfo(),
             Footer(),
-            
           ],
         ),
       ),

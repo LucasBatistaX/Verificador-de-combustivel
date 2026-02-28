@@ -30,7 +30,9 @@ class AppSizes {
   static const double h380 = 380.0; //CardData height;
   static const double h120 = 120.0; //CardInfo height;
   static const double h180 = 180.0; //CardInfo height;
+  static const double h300 = 300.0; //CardDialog height;
 
   //Widths Specifics.
-  static const double w448 = 448.0; //CardData height;
+  static const double w448 = 448.0; //CardData width;
+  static const double w500 = 500.0; //CardDialog width;
 }
