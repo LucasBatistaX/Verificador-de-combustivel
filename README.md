@@ -97,3 +97,13 @@ Melhorias de UX
 Refatorações e organização adicional da arquitetura
 
 Publicação do app (GitPages).
+_________________________________________________________________________________________________________________________________
+
+👤 Autor
+
+Desenvolvido por Lucas Batista.
+
+💻 GitHub: https://github.com/LucasBatistaX
+
+💼 LinkedIn: https://github.com/LucasBatistaX
+
