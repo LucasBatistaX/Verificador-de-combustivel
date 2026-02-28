@@ -3,6 +3,7 @@ import 'package:fuel_wise/utils/app_assets.dart';
 import 'package:fuel_wise/utils/app_colors.dart';
 import 'package:fuel_wise/utils/app_sizes.dart';
 import 'package:fuel_wise/utils/app_text_style.dart';
+import 'package:fuel_wise/widgets/card_info.dart';
 import 'package:fuel_wise/widgets/forms.dart';
 import 'package:fuel_wise/widgets/header.dart';
 
@@ -24,7 +25,7 @@ class _MyWidgetState extends State<HomePage> {
             children: [
               Header(),
               Forms(),
-              
+              CardInfo(),
             ],
           ),
         ],

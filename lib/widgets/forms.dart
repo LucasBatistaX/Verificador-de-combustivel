@@ -51,7 +51,7 @@ class Forms extends StatelessWidget {
                   decoration: InputDecoration(
                     prefixIcon: Image.asset(
                       AppAssets.money,
-                      height: AppSizes.s18,
+                      height: AppSizes.s16,
                     ),
                     floatingLabelBehavior: FloatingLabelBehavior.never,
                     border: OutlineInputBorder(
@@ -87,7 +87,7 @@ class Forms extends StatelessWidget {
                 TextButton(
                   style: TextButton.styleFrom(
                     backgroundColor: AppColors.backgroundButtonEnd,
-                    padding: EdgeInsets.symmetric(vertical: AppSizes.s14),
+                    padding: EdgeInsets.symmetric(vertical: AppSizes.s24),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadiusGeometry.circular(AppSizes.s12),
                     ),
