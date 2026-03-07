@@ -14,6 +14,13 @@ class ResultDialog extends StatefulWidget {
 }
 
 class _ResultDialogState extends State<ResultDialog> {
+
+  // transforma o dado de ponto para virgula.
+  String toComma(String data){
+    return data.replaceAll('.', ',');
+  }
+
+
   @override
   Widget build(BuildContext context) {
      final cubit = BlocProvider.of<FuelCubit>(context);
@@ -92,7 +99,7 @@ class _ResultDialogState extends State<ResultDialog> {
                                   ),
                                   RichText(
                                     text: TextSpan(
-                                      text: "${cubit.result.resultado.toStringAsFixed(1)}%" ,
+                                      text: "${toComma(cubit.result.resultado.toStringAsFixed(1))}%" ,
                                       style: AppTextStyles.richTextDialogColorful.copyWith(
                                         color: cubit.result.color
                                       ),
