@@ -16,9 +16,14 @@ class CardInfo extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadiusGeometry.circular(AppSizes.s12),
         ),
-        child: SizedBox(
-          height: AppSizes.h120,
-          width: AppSizes.w448,
+        child: Container(
+          constraints: BoxConstraints(
+            minHeight: AppSizes.h120,
+            minWidth: AppSizes.w448,
+            maxHeight: AppSizes.h130,
+            maxWidth: AppSizes.w448,
+
+          ),
           child: Column(
             children: [
               Padding(
