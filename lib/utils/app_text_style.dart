@@ -60,4 +60,22 @@ class AppTextStyles {
     color: AppColors.subtitleCard,
     fontSize: AppSizes.s14,
   );
+
+
+  //Card Dialog Styles.
+  static const TextStyle titleDialog = TextStyle(
+    fontSize: AppSizes.s20,
+    fontWeight: FontWeight.bold,
+    color: AppColors.subtitleCard
+  );
+  static const TextStyle resultDialogText = TextStyle(
+    fontSize: AppSizes.s24,
+    fontWeight: FontWeight.bold,
+    color: AppColors.backgroundHeaderBegin
+  );
+  //Card Dialog Rich Text
+
+  static const TextStyle richTextDialog = TextStyle(color: AppColors.subtitleCard, fontWeight: FontWeight.bold);
+  static const TextStyle richTextDialogColorful = TextStyle(color: AppColors.backgroundHeaderBegin, fontWeight: FontWeight.bold);
+
 }
