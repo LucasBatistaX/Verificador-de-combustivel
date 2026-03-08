@@ -36,9 +36,8 @@ class Header extends StatelessWidget {
             Text(
               "Descubra qual combustível compensa mais.",
               style: AppTextStyles.subTitleHeader.copyWith(
-                color: AppColors.title.withOpacity(AppSizes.s08),
+                color: AppColors.title.withValues(alpha: AppSizes.s08)),
               ),
-            ),
           ],
         ),
       ),

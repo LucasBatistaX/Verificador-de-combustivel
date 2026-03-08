@@ -9,6 +9,7 @@ class AppColors {
   static const Color backgroundButtonBegin = Color(0xffFBC709);
   static const Color backgroundButtonEnd = Color(0xffE29803);
   static const Color backgroundFill = Color(0xff333333);
+  static const Color etanolColor = Color(0xff21C45D);
 
   //Text Colors.
   static const Color title = Color(0xffFFFFFF); // with opacity 80%
