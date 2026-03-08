@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fuel_wise/cubit/fuel_cubit.dart';
 import 'package:fuel_wise/utils/app_assets.dart';
@@ -21,13 +22,32 @@ class _FormsState extends State<Forms> {
 
   late final GlobalKey<FormState> formKey;
 
+
+
+  // transforma o dado de virgula para ponto.
+  double toPoint(String value){
+    return double.parse(value.replaceAll(',', '.'));
+  }
+  // transforma o dado de ponto para virgula.
+  String toComma(double data){
+    return data.toString().replaceAll('.', ',');
+  }
+
+  // Verifica se e numero e transforma o dado em Double.
   bool isNumber(String data) {
     return parseNumber(data) != null;
   }
-
   double? parseNumber(String value) {
+    
+    if(value.contains(',')){
+     String withComma = value;
+     return toPoint(withComma);
+    } else if(value.contains('.')){
+      return double.tryParse(value);
+    }
     return double.tryParse(value);
   }
+
 
   @override
   void initState() {
@@ -110,7 +130,7 @@ class _FormsState extends State<Forms> {
                   TextFormField(
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return "Valor Inválido.";
+                        return "Por favor, insira um valor.";
                       } else if (!isNumber(value)) {
                         return "Digite um número.";
                       }
@@ -151,7 +171,7 @@ class _FormsState extends State<Forms> {
                   TextFormField(
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return "Valor Inválido.";
+                        return "Por favor, insira um valor.";
                       } else if (!isNumber(value)) {
                         return "Digite um número.";
                       }
