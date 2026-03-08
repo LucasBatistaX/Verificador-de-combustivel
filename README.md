@@ -52,30 +52,37 @@ ________________________________________________________________________________
 ```
 lib/
 ├── cubit/
-│   └── (responsável pelo gerenciamento de estado do app)
+│   ├── fuel_cubit.dart
+│   └── fuel_state.dart
+│   (responsável pelo gerenciamento de estado da aplicação utilizando Cubit)
 │
-├── services/
-│   └── service.dart
-│      (contém a regra de negócio e o cálculo entre gasolina e etanol)
+├── domain/
+│   ├── entities/
+│   │   └── fuel_result.dart
+│   │      (entidade que representa o resultado do cálculo entre os combustíveis)
+│   │
+│   └── service/
+│       └── fuel_service.dart
+│          (contém a regra de negócio responsável por calcular se compensa gasolina ou etanol)
 │
 ├── src/
 │   └── home_page.dart
-│      (tela principal do aplicativo)
+│      (tela principal do aplicativo onde o usuário informa os preços)
 │
 ├── utils/
 │   ├── app_assets.dart
 │   ├── app_colors.dart
 │   ├── app_sizes.dart
 │   └── app_text_style.dart
-│      (constantes visuais e padronização de estilos)
+│      (arquivos responsáveis por centralizar constantes visuais e padronização de estilos)
 │
 ├── widgets/
-│   ├── header.dart
-│   ├── forms.dart
 │   ├── card_info.dart
-│   ├── result_dialog.dart
-│   └── footer.dart
-│      (componentes reutilizáveis da interface)
+│   ├── footer.dart
+│   ├── forms.dart
+│   ├── header.dart
+│   └── result_dialog.dart
+│      (componentes reutilizáveis da interface do usuário)
 │
 └── main.dart
    (ponto de entrada da aplicação)
@@ -106,4 +113,5 @@ Desenvolvido por Lucas Batista.
 💻 GitHub: https://github.com/LucasBatistaX
 
 💼 LinkedIn: https://github.com/LucasBatistaX
+
 
