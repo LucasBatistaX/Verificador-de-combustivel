@@ -38,6 +38,7 @@ class _FormsState extends State<Forms> {
     return parseNumber(data) != null;
   }
   double? parseNumber(String value) {
+    
     if(value.contains(',')){
      String withComma = value;
      return toPoint(withComma);
