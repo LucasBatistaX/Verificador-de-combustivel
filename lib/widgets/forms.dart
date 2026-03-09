@@ -22,14 +22,13 @@ class _FormsState extends State<Forms> {
 
   late final GlobalKey<FormState> formKey;
 
-
-
   // transforma o dado de virgula para ponto.
-  double toPoint(String value){
+  double toPoint(String value) {
     return double.parse(value.replaceAll(',', '.'));
   }
+
   // transforma o dado de ponto para virgula.
-  String toComma(double data){
+  String toComma(double data) {
     return data.toString().replaceAll('.', ',');
   }
 
@@ -37,17 +36,16 @@ class _FormsState extends State<Forms> {
   bool isNumber(String data) {
     return parseNumber(data) != null;
   }
+
   double? parseNumber(String value) {
-    
-    if(value.contains(',')){
-     String withComma = value;
-     return toPoint(withComma);
-    } else if(value.contains('.')){
+    if (value.contains(',')) {
+      String withComma = value;
+      return toPoint(withComma);
+    } else if (value.contains('.')) {
       return double.tryParse(value);
     }
     return double.tryParse(value);
   }
-
 
   @override
   void initState() {
@@ -95,7 +93,7 @@ class _FormsState extends State<Forms> {
           constraints: BoxConstraints(
             minHeight: AppSizes.h370,
             maxHeight: AppSizes.h400,
-            maxWidth: AppSizes.w448
+            maxWidth: AppSizes.w448,
           ),
           child: Padding(
             padding: const EdgeInsets.all(AppSizes.s24),
@@ -148,13 +146,27 @@ class _FormsState extends State<Forms> {
                         borderRadius: BorderRadius.circular(AppSizes.s12),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppColors.backgroundButtonBegin),
-                        borderRadius: BorderRadius.circular(AppSizes.s12)
+                        borderSide: BorderSide(
+                          color: AppColors.backgroundButtonBegin,
+                        ),
+                        borderRadius: BorderRadius.circular(AppSizes.s12),
                       ),
 
-                      label: Text("Ex: 6,29", style: AppTextStyles.labelCard.copyWith(color: AppColors.subtitleCard.withAlpha(AppSizes.si60))),
+                      label: Text(
+                        "Ex: 6,29",
+                        style: AppTextStyles.labelCard.copyWith(
+                          color: AppColors.subtitleCard.withAlpha(
+                            AppSizes.si60,
+                          ),
+                        ),
+                      ),
                     ),
-                    keyboardType: TextInputType.number,
+                    keyboardType: TextInputType.numberWithOptions(
+                      decimal: true,
+                    ),
+                    inputFormatters: [
+                      FilteringTextInputFormatter.allow(RegExp(r'[0-9.,]')),
+                    ],
                   ),
                   SizedBox(height: AppSizes.s24),
                   Row(
@@ -189,12 +201,26 @@ class _FormsState extends State<Forms> {
                         borderRadius: BorderRadius.circular(AppSizes.s12),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppColors.backgroundButtonBegin),
-                        borderRadius: BorderRadius.circular(AppSizes.s12)
+                        borderSide: BorderSide(
+                          color: AppColors.backgroundButtonBegin,
+                        ),
+                        borderRadius: BorderRadius.circular(AppSizes.s12),
                       ),
-                      label: Text("Ex: 4,29", style: AppTextStyles.labelCard.copyWith(color: AppColors.subtitleCard.withAlpha(AppSizes.si60))),
+                      label: Text(
+                        "Ex: 4,29",
+                        style: AppTextStyles.labelCard.copyWith(
+                          color: AppColors.subtitleCard.withAlpha(
+                            AppSizes.si60,
+                          ),
+                        ),
+                      ),
                     ),
-                    keyboardType: TextInputType.number,
+                    keyboardType: TextInputType.numberWithOptions(
+                      decimal: true,
+                    ),
+                    inputFormatters: [
+                      FilteringTextInputFormatter.allow(RegExp(r'[0-9.,]')),
+                    ],
                   ),
                   SizedBox(height: AppSizes.s24),
                   TextButton(
