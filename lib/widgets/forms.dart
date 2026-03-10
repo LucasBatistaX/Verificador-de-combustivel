@@ -6,6 +6,7 @@ import 'package:fuel_wise/utils/app_assets.dart';
 import 'package:fuel_wise/utils/app_colors.dart';
 import 'package:fuel_wise/utils/app_sizes.dart';
 import 'package:fuel_wise/utils/app_text_style.dart';
+import 'package:fuel_wise/validations/mixins.dart';
 import 'package:fuel_wise/widgets/result_dialog.dart';
 
 class Forms extends StatefulWidget {
@@ -15,37 +16,12 @@ class Forms extends StatefulWidget {
   State<Forms> createState() => _FormsState();
 }
 
-class _FormsState extends State<Forms> {
+class _FormsState extends State<Forms> with Mixins{
   late final FuelCubit cubit;
   late final TextEditingController gasolinaController;
   late final TextEditingController etanolController;
 
   late final GlobalKey<FormState> formKey;
-
-  // transforma o dado de virgula para ponto.
-  double toPoint(String value) {
-    return double.parse(value.replaceAll(',', '.'));
-  }
-
-  // transforma o dado de ponto para virgula.
-  String toComma(double data) {
-    return data.toString().replaceAll('.', ',');
-  }
-
-  // Verifica se e numero e transforma o dado em Double.
-  bool isNumber(String data) {
-    return parseNumber(data) != null;
-  }
-
-  double? parseNumber(String value) {
-    if (value.contains(',')) {
-      String withComma = value;
-      return toPoint(withComma);
-    } else if (value.contains('.')) {
-      return double.tryParse(value);
-    }
-    return double.tryParse(value);
-  }
 
   @override
   void initState() {
@@ -126,14 +102,7 @@ class _FormsState extends State<Forms> {
                   ),
                   SizedBox(height: AppSizes.s8),
                   TextFormField(
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return "Por favor, insira um valor.";
-                      } else if (!isNumber(value)) {
-                        return "Digite um número.";
-                      }
-                      return null;
-                    },
+                    validator: isNotEmpty,
                     controller: gasolinaController,
                     style: AppTextStyles.titleCard,
                     decoration: InputDecoration(
@@ -151,7 +120,6 @@ class _FormsState extends State<Forms> {
                         ),
                         borderRadius: BorderRadius.circular(AppSizes.s12),
                       ),
-
                       label: Text(
                         "Ex: 6,29",
                         style: AppTextStyles.labelCard.copyWith(
@@ -181,14 +149,7 @@ class _FormsState extends State<Forms> {
                   ),
                   SizedBox(height: AppSizes.s8),
                   TextFormField(
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return "Por favor, insira um valor.";
-                      } else if (!isNumber(value)) {
-                        return "Digite um número.";
-                      }
-                      return null;
-                    },
+                    validator: isNotEmpty,
                     controller: etanolController,
                     style: AppTextStyles.titleCard,
                     decoration: InputDecoration(
